@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="build/img/favicon-16x16.png">
+    <!-- Useful meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Ratatype Test</title>
+  </head>
+  <body class="theme-light">
+    <div class="wrapper">
+      <div class="container">
+          <header class="header">
+            <div class="header-left">
+                <div class="header-logo">
+                    <a href="/"><img src="img/logo.svg" alt="Ratatype"></a>
+                </div>
+                <ul class="header-nav">
+                    <li class="header-nav__item">
+                        <a class="header-nav__item-link">Тест</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__item-link active">Тренажер</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__item-link">Навчання</a>
+                    </li>
+                    <li class="header-nav__item header-nav__dropdown">
+                        <button class="header-nav__item-link js-header-dropdown">
+                            <span> Більше</span> 
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.164958 0.560997C0.407413 0.283906 0.828588 0.255828 1.10568 0.498282L6.00001 4.78082L10.8943 0.498282C11.1714 0.255828 11.5926 0.283906 11.8351 0.560997C12.0775 0.838088 12.0494 1.25926 11.7723 1.50172L6.43901 6.16839C6.18766 6.38832 5.81236 6.38832 5.56101 6.16839L0.227673 1.50172C-0.0494184 1.25926 -0.0774967 0.838088 0.164958 0.560997Z" fill="#0A335C"/>
+                            </svg>
+                        </button>
+                        <ul class="header-subnav js-subnav">
+                        <li class="header-subnav__item">
+                            <a class="header-subnav__item-link">Для вчителів</a>
+                        </li>
+                        <li class="header-subnav__item">
+                            <a class="header-subnav__item-link active">Про нас</a>
+                        </li>
+                        <li class="header-subnav__item">
+                            <a class="header-subnav__item-link">Рейтинг</a>
+                        </li>
+                        <li class="header-subnav__item">
+                            <a class="header-subnav__item-link">Допомога</a>
+                        </li>
+                        <li class="header-subnav__item">
+                            <a class="header-subnav__item-link">Контакти</a>
+                        </li>
+                        <li class="header-subnav__item">
+                            <a class="header-subnav__item-link">Підтримати проєкт</a>
+                        </li>
+                     </ul>
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="header-actions">    <div class="header-actions__left">
+                    <a class="action-item action-restart" id="reload">
+                        <img src="img/restart.svg">
+                    </a>
+                    <a class="action-item action-mode js-switch-mode-btn" id="switch-mode">
+                        <img class="action__dark-mode" src="img/dark-mode.svg">
+                        <img class="action__light-mode" src="img/light-mode.svg">
+                    </a>    
+                </div>    
+                <a class="action-profile">
+                    <img src="img/avatar.jpg">
+                </a>
+            </div>
+            
+            <a class="header-burger-btn js-burger-open">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5C2 4.44772 2.44772 4 3 4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H3C2.44772 6 2 5.55228 2 5Z" fill="#00ACFF"/>
+                    <path d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z" fill="#00ACFF"/>
+                    <path d="M3 18C2.44772 18 2 18.4477 2 19C2 19.5523 2.44772 20 3 20H21C21.5523 20 22 19.5523 22 19C22 18.4477 21.5523 18 21 18H3Z" fill="#00ACFF"/>
+                </svg>
+            </a>
+            <div class="header-mobile js-mobile">
+                <div class="header-mobile__top">
+                    <div class="header-logo">
+                        <a href="/"><img src="img/logo-white.svg" alt="Ratatype"></a>
+                    </div>
+                    
+                    <a class="header-burger__close js-buger-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.70711 20.7071C4.31658 21.0976 3.68342 21.0976 3.29289 20.7071C2.90237 20.3166 2.90237 19.6834 3.29289 19.2929L10.5858 12L3.29289 4.70711C2.90237 4.31658 2.90237 3.68342 3.29289 3.29289C3.68342 2.90237 4.31658 2.90237 4.70711 3.29289L12 10.5858L19.2929 3.29289C19.6834 2.90237 20.3166 2.90237 20.7071 3.29289C21.0976 3.68342 21.0976 4.31658 20.7071 4.70711L13.4142 12L20.7071 19.2929C21.0976 19.6834 21.0976 20.3166 20.7071 20.7071C20.3166 21.0976 19.6834 21.0976 19.2929 20.7071L12 13.4142L4.70711 20.7071Z" fill="white"/>
+                        </svg>
+
+                    </a>
+                  
+                </div>
+                <div class="header-mobile__body">
+                    <ul class="header-mobile__nav">
+                        <li class="header-mobile__item">
+                            <a class="header-mobile__item-link">Тест</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a class="header-mobile__item-link active">Тренажер</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a class="header-mobile__item-link">Навчання</a>
+                        </li>
+                       
+                    </ul>
+                    <ul class="header-mobile__subnav ">
+                            <li class="header-mobile__subnav-item">
+                                <a class="header-mobile__subnav-link">Для вчителів</a>
+                            </li>
+                            <li class="header-mobile__subnav-item">
+                                <a class="header-mobile__subnav-link">Про нас</a>
+                            </li>
+                            <li class="header-mobile__subnav-item">
+                                <a class="header-mobile__subnav-link">Рейтинг</a>
+                            </li>
+                            <li class="header-mobile__subnav-item">
+                                <a class="header-mobile__subnav-link">Допомога</a>
+                            </li>
+                            <li class="header-mobile__subnav-item">
+                                <a class="header-mobile__subnav-link">Контакти</a>
+                            </li>
+                            <li class="header-mobile__subnav-item">
+                                <a class="header-mobile__subnav-link">Підтримати проєкт</a>
+                            </li>
+                    </ul>
+                    <div class="user">
+                        <a href="#" class="action-profile">
+                            <img src="img/avatar.jpg" alt="Alex">
+                        </a>
+                        <div class="user-info">
+                            <a href="#" class="user-name">Alex</a>
+                            <div class="user-coin">
+                                <img alt="Gold Coin" src="img/gold_coin.svg">
+                                <span>35 543</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </header>
+
+          <main>
+            <div class="type-wrapper">
+                <div class="type-alba">
+                    <svg width="176" height="176" viewBox="0 0 176 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_13_23)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M65.738 40.2499H114.387C112.188 28.8204 102.134 20.1862 90.0628 20.1862C77.9916 20.1862 67.937 28.8204 65.738 40.2499Z" fill="#2268BA"/>
+                        <path d="M60.9472 134.169L67.5986 151.56C67.9156 152.389 66.827 153.022 66.2629 152.337C65.1232 150.953 63.0807 150.722 61.6454 151.796C60.952 152.315 59.9477 152.066 59.5903 151.277L59.3611 150.771C58.5289 148.933 56.5762 147.873 54.5817 148.176L54.2814 148.222C53.2083 148.385 52.2771 147.476 52.4139 146.399L53.8598 135.02C54.1751 132.538 56.8211 131.088 59.0826 132.157C59.9403 132.562 60.6083 133.283 60.9472 134.169Z" fill="#D76423"/>
+                        <path d="M78.0456 134.424L84.697 151.815C85.014 152.643 83.9254 153.277 83.3613 152.592C82.2215 151.208 80.1791 150.977 78.7438 152.051C78.0504 152.57 77.0461 152.321 76.6887 151.532L76.4595 151.025C75.6273 149.188 73.6746 148.127 71.6801 148.431L71.3798 148.476C70.3067 148.639 69.3754 147.731 69.5123 146.654L70.9581 135.274C71.2734 132.793 73.9195 131.342 76.181 132.411C77.0387 132.817 77.7067 133.538 78.0456 134.424Z" fill="#D76423"/>
+                        <path d="M6.4547 86.518L42.0333 59.7317L76.9411 114.633C76.0739 113.296 52.1453 120.815 35.7 115.797C20.5529 111.175 10.3779 92.1065 6.4547 86.518Z" fill="#2268BA"/>
+                        <path d="M119.913 96.2609C117.895 121.235 95.7018 139.82 70.3434 137.771C44.985 135.722 26.0638 113.815 28.0817 88.8411C30.0995 63.867 52.2924 45.2824 77.6508 47.3313C90.1861 48.3441 97.0735 58.3267 104.711 67.0161C112.524 75.9051 120.933 83.6321 119.913 96.2609Z" fill="#3375C4"/>
+                        <path d="M77.1473 36.5969L77.1238 56.0906L169.135 56.0906C161.747 49.1863 143.157 41.5386 124.805 40.1393L77.1473 36.5969Z" fill="#FFB463"/>
+                        <path d="M169.422 65.6618L169.56 61.8693L92.0398 55.2354L105.498 125.374C139.607 126.451 168.176 99.7649 169.422 65.6618Z" fill="#FFB463"/>
+                        <rect x="50.3115" y="19.4305" width="41.9765" height="65.6194" rx="20.9883" transform="rotate(0.09 50.3115 19.4305)" fill="#3375C4"/>
+                        <circle cx="70.3832" cy="40.5175" r="12.0793" transform="rotate(0.038969 70.3832 40.5175)" fill="white"/>
+                        <circle cx="73.0779" cy="40.6964" r="7.32678" transform="rotate(0.038969 73.0779 40.6964)" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_13_23">
+                        <rect width="176" height="176" fill="white" transform="matrix(-1 0 0 1 176 0)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="type-letters">
+                    <div class="type-lesson" id='type-lesson'></div>
+                    <input id='type-input' type='text' autofocus >
+                </div>
+            </div>
+          </main>
+      </div>
+      
+    </div> 
+        <script src="js/main.js"></script> 
+        <script src="js/type.js"></script>   
+  </body>
+</html>
